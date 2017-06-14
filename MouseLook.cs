@@ -21,10 +21,10 @@ public class MouseLook : MonoBehaviour {
 
         if (rotationX > 45f)
             rotationX = 45f;
-        if (rotationX < -70f)
-            rotationX = -70f;
+        if (rotationX < -10f)
+            rotationX = -10f;
 
-        transform.eulerAngles = new Vector3(-rotationX, rotationY, 0f);
+        //     transform.eulerAngles = new Vector3(-rotationX, rotationY, 0f);
 //		transform.localRotation = Quaternion.AngleAxis(-rotationX,  Vector3.right);
 		character.transform.localRotation = Quaternion.AngleAxis(rotationY, character.transform.up);
     }
