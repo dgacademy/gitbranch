@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour {
     public float sensitivity = 500f;
-    public float rotationX;
     public float rotationY;
 
 	GameObject character;
 
 	// Use this for initialization
-	void Start () {
+	void Start_AAA () {
 		character = this.transform.parent.gameObject;
 	}
 	
-	// Update is called once per frame
 	void Update () {
         float mouseMoveX = Input.GetAxis("Mouse X");
-        float mouseMoveY = Input.GetAxis("Mouse Y");
-
-        rotationY += mouseMoveX * sensitivity * Time.deltaTime;
+        rotationY += sensitivity * Time.deltaTime;
         rotationX += mouseMoveY * sensitivity * Time.deltaTime;
         rotationZ += 0;
 
