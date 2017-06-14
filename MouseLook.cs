@@ -21,6 +21,7 @@ public class MouseLook : MonoBehaviour {
 
         rotationY += mouseMoveX * sensitivity * Time.deltaTime;
         rotationX += mouseMoveY * sensitivity * Time.deltaTime;
+        rotationZ += 0;
 
         if (rotationX > 45f)
             rotationX = 45f;
