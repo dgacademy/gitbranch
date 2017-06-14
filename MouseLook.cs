@@ -16,16 +16,16 @@ public class MouseLook : MonoBehaviour {
 	void Update () {
         float mouseMoveX = Input.GetAxis("Mouse X");
         rotationY += change * Time.deltaTime;
-        rotationX += mouseMoveY * sensitivity * Time.deltaTime;
+        rotationX += changed * sensitivity * Time.deltaTime;
         rotationZ += 0;
 
         if (rotationX > 45f)
             rotationX = 45f;
-        if (rotationX < -10f)
-            rotationX = -10f;
+        if (rotationX < -70f)
+            rotationX = -70f;
 
-//        transform.eulerAngles = new Vector3(-rotationX, rotationY, 0f);
-		transform.localRotation = Quaternion.AngleAxis(-rotationX,  Vector3.right);
+        transform.eulerAngles = new Vector3(-rotationX, rotationY, 0f);
+//		transform.localRotation = Quaternion.AngleAxis(-rotationX,  Vector3.right);
 		character.transform.localRotation = Quaternion.AngleAxis(rotationY, character.transform.up);
     }
 }
