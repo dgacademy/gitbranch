@@ -15,14 +15,14 @@ public class MouseLook : MonoBehaviour {
 	
 	void Update () {
         float mouseMoveX = Input.GetAxis("Mouse X");
-        rotationY += sensitivity * Time.deltaTime;
+        rotationY += change * Time.deltaTime;
         rotationX += mouseMoveY * sensitivity * Time.deltaTime;
         rotationZ += 0;
 
         if (rotationX > 45f)
             rotationX = 45f;
-        if (rotationX < -20f)
-            rotationX = -20f;
+        if (rotationX < -10f)
+            rotationX = -10f;
 
 //        transform.eulerAngles = new Vector3(-rotationX, rotationY, 0f);
 		transform.localRotation = Quaternion.AngleAxis(-rotationX,  Vector3.right);
