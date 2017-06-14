@@ -19,13 +19,13 @@ public class MouseLook : MonoBehaviour {
         rotationX += changed * sensitivity * Time.deltaTime;
         rotationZ += 0;
 
-        if (rotationX > 45f)
-            rotationX = 45f;
-        if (rotationX < -10f)
-            rotationX = -10f;
+        if (rotationX > 35f)
+            rotationX = 35f;
+        if (rotationX < -0f)
+            rotationX = -0f;
 
-        //     transform.eulerAngles = new Vector3(-rotationX, rotationY, 0f);
-//		transform.localRotation = Quaternion.AngleAxis(-rotationX,  Vector3.right);
+       // transform.eulerAngles = new Vector3(-rotationX, rotationY, 0f);
+		transform.localRotation = Quaternion.AngleAxis(-rotationX,  Vector3.right);
 		character.transform.localRotation = Quaternion.AngleAxis(rotationY, character.transform.up);
     }
 }
